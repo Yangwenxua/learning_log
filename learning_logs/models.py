@@ -11,6 +11,8 @@ class Topic(models.Model):
        owner = models.ForeignKey(User, on_delete=models.CASCADE, default=2)
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
        public = models.BooleanField(default=False)
 >>>>>>> temp-lzy
 

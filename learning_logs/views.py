@@ -20,7 +20,11 @@ def topics(request):
     else:
         # 未登录用户只能看到公开的主题
         topics = Topic.objects.filter(public=True).order_by('date_added')
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
     context = {'topics': topics}
     return render(request, 'learning_logs/topics.html', context)
 
@@ -33,7 +37,11 @@ def topic(request, topic_id):
     # 如果主题不是公开的，确保用户已登录并且是主题的所有者
     if not topic.public and (not request.user.is_authenticated or topic.owner != request.user):
         raise Http404
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
     entries = topic.entry_set.order_by('-date_added')
     context = {'topic': topic, 'entries': entries}
     return render(request, 'learning_logs/topic.html', context)
@@ -44,7 +52,11 @@ def new_topic(request):
 @login_required
 def new_topic(request):
     """允许用户添加新主题"""
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
     if request.method != 'POST':
         # 未提交数据，创建一个新表单
         form = TopicForm()
@@ -58,7 +70,11 @@ def new_topic(request):
             new_topic = form.save(commit=False)
             new_topic.owner = request.user  # 确保新主题关联到当前用户
             new_topic.save()
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
             return redirect('learning_logs:topics')
 
     # 显示空表单或指出表单数据无效
@@ -81,7 +97,11 @@ def new_entry(request, topic_id):
         form = EntryForm()
     else:
         # POST 提交的数据，对数据进行处理
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
         form = EntryForm(data=request.POST)
         if form.is_valid():
             new_entry = form.save(commit=False)
@@ -110,7 +130,11 @@ def edit_entry(request, entry_id):
     if entry.topic.owner != request.user:
         raise Http404
 
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
     if request.method != 'POST':
         form = EntryForm(instance=entry)
     else:
@@ -181,5 +205,9 @@ def new_entry(request, topic_id):
 # @login_required
 # def edit_entry(request, entry_id):
 =======
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
     

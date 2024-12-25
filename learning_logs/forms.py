@@ -5,8 +5,10 @@ class TopicForm(forms.ModelForm):
     class Meta:
         model = Topic
 <<<<<<< HEAD
+<<<<<<< HEAD
         fields = ['text']
         labels = {'text': ''}
+=======
 =======
         fields = ['text', 'public']
         labels = {'text': '', 'public': 'Public topic'}
