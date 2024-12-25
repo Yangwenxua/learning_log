@@ -12,9 +12,14 @@ class Topic(models.Model):
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
        public = models.BooleanField(default=False)
 >>>>>>> temp-lzy
+=======
+       public = models.BooleanField(default=False)
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 
        def __str__(self):
            """返回模型的字符串表示"""

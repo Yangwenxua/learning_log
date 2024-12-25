@@ -125,7 +125,11 @@ USE_I18N = True
 
 USE_L10N = True
 
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 USE_TZ = True
 
 

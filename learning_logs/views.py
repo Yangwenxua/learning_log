@@ -21,7 +21,11 @@ def topics(request):
         # 未登录用户只能看到公开的主题
         topics = Topic.objects.filter(public=True).order_by('date_added')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 =======
 >>>>>>> main
 >>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
@@ -38,7 +42,11 @@ def topic(request, topic_id):
     if not topic.public and (not request.user.is_authenticated or topic.owner != request.user):
         raise Http404
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 =======
 >>>>>>> main
 >>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
@@ -53,7 +61,11 @@ def new_topic(request):
 def new_topic(request):
     """允许用户添加新主题"""
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 =======
 >>>>>>> main
 >>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
@@ -71,7 +83,11 @@ def new_topic(request):
             new_topic.owner = request.user  # 确保新主题关联到当前用户
             new_topic.save()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 =======
 >>>>>>> main
 >>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
@@ -98,7 +114,11 @@ def new_entry(request, topic_id):
     else:
         # POST 提交的数据，对数据进行处理
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 =======
 >>>>>>> main
 >>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
@@ -131,7 +151,11 @@ def edit_entry(request, entry_id):
         raise Http404
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 =======
 >>>>>>> main
 >>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
@@ -206,7 +230,11 @@ def new_entry(request, topic_id):
 # def edit_entry(request, entry_id):
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> temp-lzy
+=======
+>>>>>>> main
+>>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
 =======
 >>>>>>> main
 >>>>>>> 692d21f307d04745ca70f09977f7c5aaa7a6f475
