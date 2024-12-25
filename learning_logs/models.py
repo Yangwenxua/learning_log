@@ -9,6 +9,10 @@ class Topic(models.Model):
        date_added = models.DateTimeField(auto_now_add=True)  # 自动设置为当前日期和时间
        #owner = models.ForeignKey(User, on_delete=models.CASCADE)
        owner = models.ForeignKey(User, on_delete=models.CASCADE, default=2)
+<<<<<<< HEAD
+=======
+       public = models.BooleanField(default=False)
+>>>>>>> main
 
        def __str__(self):
            """返回模型的字符串表示"""
