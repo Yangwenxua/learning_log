@@ -1,0 +1,17 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- 调整标题的字体大小为24px -->
+    <h1 class="mb-4" style="font-size: 26px;">Add a new topic:</h1>
+    <form action="{% url 'learning_logs:new_topic' %}" method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <!-- 表单内容以段落标签<p>显示 -->
+        <div class="mb-3">
+            {{ form.as_p }}
+        </div>
+        <!-- 提交按钮使用Bootstrap的按钮样式 -->
+        <button type="submit" class="btn btn-primary">Add topic</button>
+    </form>
+</div>
+{% endblock %}
