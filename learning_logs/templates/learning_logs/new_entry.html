@@ -1,0 +1,15 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- 增加主题名称的字体大小 -->
+    <p style="font-size: 24px;"><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+    <!-- 增加表单标题的字体大小 -->
+    <h2 style="font-size: 22px;">Add a new entry:</h2>
+    <form action="{% url 'learning_logs:new_entry' topic.id %}" method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Add entry</button>
+    </form>
+</div>
+{% endblock %}
