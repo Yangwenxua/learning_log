@@ -1,7 +1,0 @@
-<!-- topic_update.html -->
-<form method="post" action="{% url 'topic_update' topic.pk %}">
-    {% csrf_token %}
-    <label for="title">标题:</label>
-    <input type="text" name="title" id="title" value="{{ topic.title }}" required>
-    <button type="submit">保存更改</button>
-</form>

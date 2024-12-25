@@ -1,9 +1,0 @@
-<!-- notes/templates/notes/new_topic.html -->
-{% extends 'notes/base.html' %}
-{% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">创建主题</button>
-</form>
-{% endblock %}

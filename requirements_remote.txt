@@ -1,3 +1,0 @@
-# 线上项目的部署需求
-gunicorn
-psycopg2
