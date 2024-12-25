@@ -1,0 +1,16 @@
+<!-- notes/templates/notes/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}学习笔记{% endblock %}</title>
+    {% load static %} <!-- 加载 static 标签库 -->
+    <link rel="stylesheet" href="{% static 'notes/styles.css' %}"> <!-- 引入CSS文件 -->
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
