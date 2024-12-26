@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -140,7 +141,7 @@ config = Config()
 
 # 检查是否在 Platform.sh 环境中
 if config.is_valid_platform():
-    if config.has_relationship('database'):  # 确保数据库关系存在
+    if config.has_relationship('database'):  # 确保数据库存
         db_settings = config.credentials('database')
         DATABASES = {
             'default': {
@@ -168,3 +169,6 @@ else:
     }
     STATIC_ROOT = BASE_DIR / 'static'
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -6,7 +6,7 @@
     <ul class="list-group">
         {% for topic in topics %}
         <li class="list-group-item">
-            <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic.text }}</a>
+            <a href="{% url 'learning_logs:topic' topic.id %}" class="topic-link">{{ topic.text }}</a>
         </li>
         {% empty %}
         <li class="list-group-item">No topics have been added yet.</li>
@@ -14,4 +14,14 @@
     </ul>
     <a href="{% url 'learning_logs:new_topic' %}" class="btn btn-primary mt-4">Add a new topic</a>
 </div>
+
+<style>
+    .topic-link {
+        font-size: 20px; /* 增大字体大小 */
+        color: #007bff; /* 可选：改变链接颜色 */
+    }
+    .list-group-item {
+        padding: 10px 15px; /* 增加内边距，使得列表项更易点击 */
+    }
+</style>
 {% endblock content %}
